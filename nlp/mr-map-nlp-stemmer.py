@@ -20,7 +20,7 @@ if __name__ == "__main__":
 		if len(parts) < 2:
 			sys.stderr.write("Skipping valueless line:"+line+"\n")
 		else:
-			[key, value] = line.split('\t')
+			[key, value] = line.split('\t',1)
 
 			words = value.split()
 			nonstop = [ re.sub(r'[^A-Za-z\xe9\xe1\xed\xf3\xfa\xf1]','',w.lower().strip()) for w in words if w not in stemer.stopwords ]
