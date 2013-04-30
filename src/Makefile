@@ -1,5 +1,8 @@
 CC=gcc
 CFLAGS=-ggdb
+mr-add-key: mr-add-key.c
+	$(CC) $< $(CFLAGS) -o $@
+
 mr-add-value: mr-add-value.c
 	$(CC) $< $(CFLAGS) -o $@
 
