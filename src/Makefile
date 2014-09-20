@@ -1,5 +1,10 @@
 CC=gcc
 CFLAGS=-ggdb
+
+all: mr-add-key mr-add-value mr-reduce-add mr-reduce-max mr-reduce-min mr-reduce-concat
+
+.PHONY: all
+
 mr-add-key: mr-add-key.c
 	$(CC) $< $(CFLAGS) -o $@
 
@@ -21,4 +26,4 @@ mr-reduce-concat: mr-reduce-concat.c
 .PHONY: clean
 
 clean:
-	rm mr-add-value mr-reduce-add mr-reduce-max mr-reduce-min mr-reduce-concat
+	rm mr-add-value mr-reduce-add mr-reduce-max mr-reduce-min mr-reduce-concat mr-add-key
